@@ -11,7 +11,7 @@ public class GameOverDetection : MonoBehaviour
         GameController gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         if (!gameController.Win)
         {
-            gameController.Losing();
+            StartCoroutine(gameController.Losing());
         }
 
     }
