@@ -8,6 +8,9 @@ public class GameController : MonoBehaviour
     public int objectValue;
     public int counter;
     public List<GameObject> prefabs;
+
+    public bool Lost;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,9 +48,22 @@ public class GameController : MonoBehaviour
                             counter = 0;
                         }
                         break;
+
+                    case 2:
+                        counter += 1;
+                        if (counter == 2)
+                        {
+                            StartCoroutine(Winning());
+                        }
+                        break;
                 }
 
                 break;
         }
+    }
+
+    public IEnumerator Winning()
+    {
+        yield return new WaitForSeconds(5f);
     }
 }
