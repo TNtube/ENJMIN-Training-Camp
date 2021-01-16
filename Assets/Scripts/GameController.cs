@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -29,7 +30,10 @@ public class GameController : MonoBehaviour
         switch (SceneValue)
         {
             case 0:
-                Instantiate(prefabs[objectValue]);
+                if (objectValue != 3)
+                {
+                    Instantiate(prefabs[objectValue]);
+                }
                 switch (objectValue)
                 {
                     case 0:
@@ -53,8 +57,11 @@ public class GameController : MonoBehaviour
                         counter += 1;
                         if (counter == 2)
                         {
+                            objectValue += 1;
                             StartCoroutine(Winning());
                         }
+                        break;
+                    case 3:
                         break;
                 }
 
@@ -65,5 +72,16 @@ public class GameController : MonoBehaviour
     public IEnumerator Winning()
     {
         yield return new WaitForSeconds(5f);
+        if (Lost == false)
+        {
+            Debug.Log("you are winner !");
+            SceneManager.LoadScene("Scene2");
+        }
+        else
+        {
+
+
+        }
+
     }
 }
