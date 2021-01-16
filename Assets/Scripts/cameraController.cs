@@ -2,72 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
-{
-    private float moveSpeed = 0.5f;
-    private float scrollSpeed = 10f;
 
-    float horizontalInput;
-    float verticalInput;
-    float wheelInput;
-
-    public float speedH = 5.0f;
-    public float speedV = 5.0f;
-
-    private float yaw = 0.0f;
-    private float pitch = 0.0f;
-
-
-
-    void Update()
+    public class cameraController : MonoBehaviour
     {
-        Vector3 rotation = transform.eulerAngles;
+        public Camera Cam;
+        private Vector3 center = new Vector3(0, 0, 0);
 
-
-
-        float ScrollWheelChange = Input.GetAxis("Mouse ScrollWheel");
-        Camera.main.transform.position += Camera.main.transform.forward * ScrollWheelChange * 3;
-    }
-
-    void FixedUpdate()
-    {
-
-
-        if (Input.GetMouseButton(2))
+        // Update is called once per frame
+        void Update()
         {
-
-            if (Input.GetAxis("Mouse X") > 0)
+            if (Input.GetMouseButton(1))
             {
-                Camera.main.transform.position += moveSpeed / 2 * -Camera.main.transform.right;
+                float rotate = Input.GetAxis("Mouse X") * 2;
+                Cam.transform.RotateAround(center, new Vector3(0, 1, 0), rotate);
             }
-            if (Input.GetAxis("Mouse X") < 0)
-            {
-                Camera.main.transform.position += moveSpeed / 2 * Camera.main.transform.right;
-            }
-
-            if (Input.GetAxis("Mouse Y") > 0)
-            {
-                Camera.main.transform.position += moveSpeed / 2 * -Camera.main.transform.up;
-            }
-            if (Input.GetAxis("Mouse Y") < 0)
-            {
-                Camera.main.transform.position += moveSpeed / 2 * Camera.main.transform.up;
-            }
-        }
-
-        if (Input.GetMouseButtonDown(2))
-        {
-            transform.position += scrollSpeed * new Vector3(0, Input.GetAxis("Mouse X"), 0);
-        }
-
-
-
-        if (Input.GetMouseButton(1))
-        {
-            yaw += speedH * Input.GetAxis("Mouse X");
-            pitch -= speedV * Input.GetAxis("Mouse Y");
-
-            transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
         }
     }
-}
