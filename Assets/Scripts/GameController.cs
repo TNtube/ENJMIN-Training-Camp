@@ -55,13 +55,15 @@ public class GameController : MonoBehaviour
 
     public IEnumerator Losing()
     {
+        Lost = true;
         yield return new WaitForSeconds(2f);
-
-        if (!Win)
+        if(!Win)
         {
-            Lost = true;
             Debug.Log("you lost :/");
             SceneManager.LoadScene(SceneValue);
         }
+        
+
+        
     }
 }
