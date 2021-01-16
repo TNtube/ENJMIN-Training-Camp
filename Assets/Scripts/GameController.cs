@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Instantiate(prefabs[0]);
+        prefabs.RemoveAt(0);
 
 
     }
@@ -25,49 +26,20 @@ public class GameController : MonoBehaviour
     {
 
     }
+
     public void OnPlaced()
     {
-        switch (SceneValue)
+        if (prefabs.Count > 0)
         {
-            case 0:
-                if (objectValue != 3)
-                {
-                    Instantiate(prefabs[objectValue]);
-                }
-                switch (objectValue)
-                {
-                    case 0:
-                        counter += 1;
-                        if (counter == 2)
-                        {
-                            objectValue += 1;
-                            counter = 0;
-                        }
-                        break;
-                    case 1:
-                        counter += 1;
-                        if (counter == 2)
-                        {
-                            objectValue += 1;
-                            counter = 0;
-                        }
-                        break;
-
-                    case 2:
-                        counter += 1;
-                        if (counter == 2)
-                        {
-                            objectValue += 1;
-                            StartCoroutine(Winning());
-                        }
-                        break;
-                    case 3:
-                        break;
-                }
-
-                break;
+            Instantiate(prefabs[0]);
+            prefabs.RemoveAt(0);
+        }
+        else
+        {
+            StartCoroutine(Winning());
         }
     }
+
 
     public IEnumerator Winning()
     {
