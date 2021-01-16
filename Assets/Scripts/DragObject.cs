@@ -9,7 +9,6 @@ public class DragObject : MonoBehaviour
     private float mZCoord;
     public bool dropped;
 
-    // Start is called before the first frame update
     void OnMouseDown()
     {
         if (dropped == false)
@@ -30,7 +29,6 @@ public class DragObject : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
 
-    // Update is called once per frame
     void OnMouseDrag()
     {
         if (dropped == false)
@@ -58,5 +56,7 @@ public class DragObject : MonoBehaviour
 
         }
     }
+
+    
 }
 

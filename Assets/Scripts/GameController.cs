@@ -6,26 +6,20 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public int SceneValue;
-    public int objectValue;
-    public int counter;
     public List<GameObject> prefabs;
 
-    public bool Lost;
+    public bool Lost = false;
+    public bool Win = false;
 
-    // Start is called before the first frame update
+
     void Start()
     {
+
         Instantiate(prefabs[0]);
         prefabs.RemoveAt(0);
 
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void OnPlaced()
     {
@@ -36,7 +30,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            StartCoroutine(Winning());
+            StartCoroutine(Winning());  
         }
     }
 
@@ -46,8 +40,10 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(5f);
         if (Lost == false)
         {
+            Win = true;
             Debug.Log("you are winner !");
-            SceneManager.LoadScene("Scene2");
+            SceneValue++;
+            SceneManager.LoadScene(SceneValue);
         }
         else
         {
@@ -55,5 +51,17 @@ public class GameController : MonoBehaviour
 
         }
 
+    }
+
+    public IEnumerator Losing()
+    {
+        yield return new WaitForSeconds(2f);
+
+        if (!Win)
+        {
+            Lost = true;
+            Debug.Log("you lost :/");
+            SceneManager.LoadScene(SceneValue);
+        }
     }
 }
