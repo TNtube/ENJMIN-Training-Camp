@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4238633897921614, guid: ab28e8006e210aa4480fe64bd6fa7208, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4238633897921614, guid: ab28e8006e210aa4480fe64bd6fa7208, type: 3}
       propertyPath: m_LocalPosition.z
@@ -621,6 +621,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneValue: 2
   prefabs:
+  - {fileID: 7303992814408905342, guid: 55e258d7839e07c4481a14fd38137b09, type: 3}
+  - {fileID: 7303992814408905342, guid: 55e258d7839e07c4481a14fd38137b09, type: 3}
   - {fileID: 1163852272622471086, guid: 9940e8c99aaae4643b60acafc6ac5d93, type: 3}
   - {fileID: 1163852272622471086, guid: 9940e8c99aaae4643b60acafc6ac5d93, type: 3}
   Lost: 0
