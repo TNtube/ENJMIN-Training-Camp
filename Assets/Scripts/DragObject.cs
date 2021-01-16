@@ -6,9 +6,6 @@ public class DragObject : MonoBehaviour
 {
     private Vector3 mOffset;
     public bool clicked;
-    public int value;
-    public Rigidbody gameObjectsRigidBody;
-
     private float mZCoord;
     public bool dropped;
 
@@ -49,25 +46,15 @@ public class DragObject : MonoBehaviour
 
         if (clicked == false)
         {
-            gameObjectsRigidBody = gameObject.AddComponent<Rigidbody>();
+            Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+            rb.isKinematic = false;
+            rb.useGravity = true;
+            gameObject.GetComponent<MeshCollider>().isTrigger = false;
 
             clicked = true;
-            switch (value)
-            {
-                case 0:
-                    gameObjectsRigidBody.mass = 1;
-                    break;
+            
 
-                case 1:
-                    gameObjectsRigidBody.mass = 3;
-                    break;
-
-                case 2:
-                    gameObjectsRigidBody.mass = 7;
-                    break;
-            }
-
-            GameObject.Find("Main Camera").GetComponent<GameController>().OnPlaced();
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().OnPlaced();
 
         }
     }
