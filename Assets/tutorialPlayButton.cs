@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayButton : MonoBehaviour
+public class tutorialPlayButton : MonoBehaviour
 {
     public void OnClick()
     {
-        SceneManager.LoadScene("TutorialScene");
+        SceneManager.LoadScene("Scene1");
     }
 }
