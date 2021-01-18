@@ -8,6 +8,11 @@ public class Menu : MonoBehaviour
     public GameObject toEnable;
     public GameObject toDisable;
 
+    public GameObject musicPlayer;
+
+    public float volume;
+    public Slider volumeSlider;
+
     private static Menu instance = null;
 
 
@@ -18,6 +23,7 @@ public class Menu : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            musicPlayer = GameObject.Find("AudioListener");
 
         }
         else
@@ -36,5 +42,11 @@ public class Menu : MonoBehaviour
         toDisable = toEnable;
         toEnable = temp;
 
+    }
+
+    public void OnValueChange()
+    {
+        volume = volumeSlider.value;
+        musicPlayer.GetComponent<AudioSource>().volume = volume;
     }
 }
