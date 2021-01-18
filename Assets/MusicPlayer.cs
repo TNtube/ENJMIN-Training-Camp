@@ -39,6 +39,7 @@ public class MusicPlayer : MonoBehaviour
                     source.clip = toPlay;
                     source.PlayScheduled(0f);
                 }
+                source.clip = musicList[0];
                 break;
             case 1:
                 toPlay = musicList[1];
