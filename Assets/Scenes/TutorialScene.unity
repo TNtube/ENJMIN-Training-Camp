@@ -482,11 +482,11 @@ MonoBehaviour:
   currentScene: 0
   source: {fileID: 632717625}
   musicList:
-  - {fileID: 8300000, guid: 9cc5067c17e146e4da81df3d6be1ace4, type: 3}
-  - {fileID: 8300000, guid: b4c6526ab816a6241a5630c00279b484, type: 3}
-  - {fileID: 8300000, guid: c1fec6582542f204eaf53fabf1f57311, type: 3}
-  - {fileID: 8300000, guid: bdb8bfcdd6e1560439ed42cb9e5dc29a, type: 3}
-  - {fileID: 8300000, guid: ae1d1b56c9e18f8429390fe3085acb49, type: 3}
+  - {fileID: 8300000, guid: 7c535bbefbae1c448ad8a3ba97a5f525, type: 3}
+  - {fileID: 8300000, guid: 92206a87579286b4faf183c75f860da6, type: 3}
+  - {fileID: 8300000, guid: b3cabbdddd07eaa41a7fbb39b03a937d, type: 3}
+  - {fileID: 8300000, guid: 027d5db93820a1741a18b2f144edfb66, type: 3}
+  - {fileID: 8300000, guid: 17110d05c879437428190bf3ad146b6e, type: 3}
 --- !u!1 &711066875
 GameObject:
   m_ObjectHideFlags: 0
