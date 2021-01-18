@@ -66,9 +66,9 @@ public class DragObject : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         float magnitude = collision.relativeVelocity.magnitude;
-        if ( collision.relativeVelocity.magnitude > 10)
+        if ( collision.relativeVelocity.magnitude > 5)
         {
-            audioSource.volume = 0.2f + magnitude/50;
+            audioSource.volume = (0.2f + magnitude/30) * GameObject.Find("PauseMenu").GetComponent<Menu>().volume;
             audioSource.Play();
         }
     }
