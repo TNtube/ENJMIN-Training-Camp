@@ -484,9 +484,9 @@ MonoBehaviour:
   musicList:
   - {fileID: 8300000, guid: 9cc5067c17e146e4da81df3d6be1ace4, type: 3}
   - {fileID: 8300000, guid: b4c6526ab816a6241a5630c00279b484, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: c1fec6582542f204eaf53fabf1f57311, type: 3}
+  - {fileID: 8300000, guid: bdb8bfcdd6e1560439ed42cb9e5dc29a, type: 3}
+  - {fileID: 8300000, guid: ae1d1b56c9e18f8429390fe3085acb49, type: 3}
 --- !u!1 &711066875
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +695,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2507366692762933772, guid: 9b2600c3fd92d54499430c8ab434dbc3,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca3c736bbc0c41c488c2beb4b01a8a4d, type: 3}
     - target: {fileID: 3625368848824398118, guid: 9b2600c3fd92d54499430c8ab434dbc3,
         type: 3}
       propertyPath: m_RootOrder
