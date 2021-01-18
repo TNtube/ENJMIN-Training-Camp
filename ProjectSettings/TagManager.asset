@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Draggable
   - GameOverDetector
+  - LevelLoader
   layers:
   - Default
   - TransparentFX

@@ -13,12 +13,12 @@ public class GameController : MonoBehaviour
     public bool Win = false;
 
     public GameObject countdownText;
-    public Text cdText;
+    private Text cdText;
 
 
     void Start()
     {
-
+        cdText = countdownText.GetComponent<Text>();
         Instantiate(prefabs[0]);
         prefabs.RemoveAt(0);
 
@@ -52,13 +52,13 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         cdText.text = "1";
         yield return new WaitForSeconds(1f);
-        countdownText.SetActive(true);
+
+        countdownText.SetActive(false);
         if (Lost == false)
         {
             Win = true;
             Debug.Log("you are winner !");
-            SceneValue++;
-            SceneManager.LoadScene(SceneValue);
+            GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>().LoadNextLevel();
         }
         else
         {
@@ -75,7 +75,7 @@ public class GameController : MonoBehaviour
         if(!Win)
         {
             Debug.Log("you lost :/");
-            SceneManager.LoadScene(SceneValue);
+            GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>().ReloadCurrentLevel();
         }
         
 
