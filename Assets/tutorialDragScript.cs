@@ -8,6 +8,7 @@ public class tutorialDragScript : MonoBehaviour
     public bool clicked;
     private float mZCoord;
     public bool dropped;
+    private AudioSource audioSource;
 
 
     void OnMouseDown()
@@ -58,4 +59,22 @@ public class tutorialDragScript : MonoBehaviour
 
         }
     }
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Entered collisions");
+        float magnitude = collision.relativeVelocity.magnitude;
+        Debug.Log("" + magnitude);
+        if (collision.relativeVelocity.magnitude > 5)
+        {
+            audioSource.volume = 0.2f + magnitude / 30;
+            audioSource.Play();
+        }
+    }
+
 }
