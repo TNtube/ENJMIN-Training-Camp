@@ -111,7 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clicked: 0
   dropped: 0
-  audioSource: {fileID: 4584150304056684530}
 --- !u!54 &4728772138547578585
 Rigidbody:
   m_ObjectHideFlags: 0

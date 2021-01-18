@@ -111,8 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clicked: 0
   dropped: 0
-  fallingSound: {fileID: 8300000, guid: fbeb2915ad97db542b6c202ed7984b4a, type: 3}
-  audioSource: {fileID: 6823965591333613516}
 --- !u!54 &-1032917438134978102
 Rigidbody:
   m_ObjectHideFlags: 0
