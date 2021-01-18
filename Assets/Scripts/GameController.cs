@@ -61,7 +61,6 @@ public class GameController : MonoBehaviour
         if (Lost == false)
         {
             Win = true;
-            Debug.Log("you are winner !");
             GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>().LoadNextLevel();
         }
         else
@@ -78,7 +77,6 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         if(!Win)
         {
-            Debug.Log("you lost :/");
             GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>().ReloadCurrentLevel();
         }
         

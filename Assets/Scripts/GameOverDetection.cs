@@ -7,14 +7,10 @@ public class GameOverDetection : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Entered Trigger event");
         GameController gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-        if (!gameController.Win)
+        if (!gameController.Win && !gameController.Lost)
         {
             StartCoroutine(gameController.Losing());
         }
-
     }
-
-
 }

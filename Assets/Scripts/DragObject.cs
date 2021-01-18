@@ -65,9 +65,7 @@ public class DragObject : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Entered collisions");
         float magnitude = collision.relativeVelocity.magnitude;
-        Debug.Log("" + magnitude);
         if ( collision.relativeVelocity.magnitude > 5)
         {
             audioSource.volume = 0.2f + magnitude/30;

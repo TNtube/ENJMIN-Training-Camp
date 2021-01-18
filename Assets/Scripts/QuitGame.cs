@@ -7,6 +7,5 @@ public class QuitGame : MonoBehaviour
     public void QuitGameTime()
     {
         Application.Quit();
-        Debug.Log("Game is exiting");
     }
 }

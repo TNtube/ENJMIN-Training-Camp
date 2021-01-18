@@ -29,7 +29,6 @@ public class MusicPlayer : MonoBehaviour
     private void Update()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log("" + currentScene);
         AudioClip toPlay;
         switch (currentScene)
         {
