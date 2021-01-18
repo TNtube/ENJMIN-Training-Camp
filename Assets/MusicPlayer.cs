@@ -50,7 +50,7 @@ public class MusicPlayer : MonoBehaviour
                 source.clip = musicList[1];
                 break;
             case 4:
-                toPlay = musicList[1];
+                toPlay = musicList[2];
                 if (!source.isPlaying)
                 {
                     source.clip = toPlay;
@@ -60,7 +60,7 @@ public class MusicPlayer : MonoBehaviour
                 break;
 
             case 7:
-                toPlay = musicList[1];
+                toPlay = musicList[3];
                 if (!source.isPlaying)
                 {
                     source.clip = toPlay;
@@ -69,7 +69,7 @@ public class MusicPlayer : MonoBehaviour
                 source.clip = musicList[3];
                 break;
             case 10:
-                toPlay = musicList[1];
+                toPlay = musicList[4];
                 if (!source.isPlaying)
                 {
                     source.clip = toPlay;
