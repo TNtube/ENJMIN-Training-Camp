@@ -8,6 +8,25 @@ public class Menu : MonoBehaviour
     public GameObject toEnable;
     public GameObject toDisable;
 
+    private static Menu instance = null;
+
+
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
     public void OnClick()
     {
         GameObject temp = toDisable;
