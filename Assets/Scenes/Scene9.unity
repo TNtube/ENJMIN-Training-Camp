@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6763f25cc0780e548af63af615b0f4b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneValue: 10
+  SceneValue: 9
   prefabs:
   - {fileID: 4379045592905717936, guid: 0c0fb0db002341c48b64fa0dbf7a2f79, type: 3}
   - {fileID: 4379045592905717936, guid: 0c0fb0db002341c48b64fa0dbf7a2f79, type: 3}
