@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1858831143014627131}
   - component: {fileID: 4272769857939280915}
   - component: {fileID: 8309718362910184877}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 6103056577361790066}
   - component: {fileID: 8290072922505830436}
   - component: {fileID: 4265472533742789355}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Transition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &8373832421550851844
 MonoBehaviour:
@@ -216,7 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3625368848824398118}
   - component: {fileID: 3906848151580361373}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LevelLoader
   m_TagString: LevelLoader
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 3705884774628051005}
   - component: {fileID: 6504562652029111306}
   - component: {fileID: 3013560500762189416}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 1567229107101017360}
   - component: {fileID: 2455132919954600690}
   - component: {fileID: 7512984158717870964}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 5158162474052042225}
   - component: {fileID: 728927935820982816}
   - component: {fileID: 1568733195139782011}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Transition (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &3204349584237688357
 MonoBehaviour:

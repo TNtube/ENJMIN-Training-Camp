@@ -50,15 +50,14 @@ public class tutorialScript : MonoBehaviour
 
             case 2:
                 textObject.SetActive(true);
-                tutorialText.text = "Let go of left click to let the rock fall.";
+                tutorialText.text = "Release left click to let the rock fall.";
                 yield return new WaitForSeconds(2f);
                 five = true;
                 break;
 
             case 3:
                 textObject.SetActive(true);
-                tutorialText.text = "Objects all have a certain weight. Make sure to drop them in a way that won't make the platform fall !";
-                button.SetActive(true);
+                tutorialText.text = "Objects all have a certain weight. Make sure to drop them in a way that won't make the platform flip!";
                 break;
 
         }
