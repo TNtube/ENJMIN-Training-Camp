@@ -42,17 +42,21 @@ public class GameController : MonoBehaviour
     public IEnumerator Winning()
     {
         countdownText.SetActive(true);
-        cdText.text = "5";
-        yield return new WaitForSeconds(1f);
-        cdText.text = "4";
-        yield return new WaitForSeconds(1f);
-        cdText.text = "3";
-        yield return new WaitForSeconds(1f);
-        cdText.text = "2";
-        yield return new WaitForSeconds(1f);
-        cdText.text = "1";
-        yield return new WaitForSeconds(1f);
+        int cd = 5;
+        while(cd > 0)
+        {
+            if (!Lost)
+            {
+                cdText.text = "" + cd;
 
+            }
+            else
+            {
+                cdText.text = "";
+            }
+            yield return new WaitForSeconds(1f);
+            cd--;
+        }
         countdownText.SetActive(false);
         if (Lost == false)
         {

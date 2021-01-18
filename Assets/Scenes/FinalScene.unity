@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.11764706, g: 0.11764706, b: 0.11764706, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -364,6 +364,8 @@ GameObject:
   - component: {fileID: 508418831}
   - component: {fileID: 508418833}
   - component: {fileID: 508418832}
+  - component: {fileID: 508418835}
+  - component: {fileID: 508418834}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -446,6 +448,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508418830}
   m_CullTransparentMesh: 1
+--- !u!95 &508418834
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508418830}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7a07190a5924a04486ab86eb1d8d386, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &508418835
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508418830}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1142944412
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,10 +591,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1814104610191893967, guid: 9b2600c3fd92d54499430c8ab434dbc3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1858831143014627131, guid: 9b2600c3fd92d54499430c8ab434dbc3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.7
+      value: -35.81
       objectReference: {fileID: 0}
     - target: {fileID: 3625368848824398118, guid: 9b2600c3fd92d54499430c8ab434dbc3,
         type: 3}
@@ -581,7 +619,7 @@ PrefabInstance:
     - target: {fileID: 3625368848824398118, guid: 9b2600c3fd92d54499430c8ab434dbc3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -56.18
       objectReference: {fileID: 0}
     - target: {fileID: 3625368848824398118, guid: 9b2600c3fd92d54499430c8ab434dbc3,
         type: 3}
@@ -622,6 +660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272769857939280915, guid: 9b2600c3fd92d54499430c8ab434dbc3,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b2600c3fd92d54499430c8ab434dbc3, type: 3}
