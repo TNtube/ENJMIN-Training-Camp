@@ -68,7 +68,7 @@ public class DragObject : MonoBehaviour
         float magnitude = collision.relativeVelocity.magnitude;
         if ( collision.relativeVelocity.magnitude > 5)
         {
-            audioSource.volume = 0.2f + magnitude/30;
+            audioSource.volume = (0.2f + magnitude/30) * GameObject.Find("PauseMenu").GetComponent<Menu>().volume;
             audioSource.Play();
         }
     }
